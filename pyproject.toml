@@ -1,0 +1,24 @@
+[project]
+name = "hpchw"
+authors = [
+  { name="Your Name", email="your.email@example.com" },
+]
+description = "A simple HPC Hello World Project"
+# Relative path to the README.md file
+readme = "README.md"
+# Pin for an analyisis (== or ~= for patching) and minimal for a package (>=)
+requires-python = "~=3.13.0"
+# Relative path to the license file
+license.file = "LICENSE"
+# Use git tags for versioning
+dynamic = ["version"]
+
+dependencies = [
+    # pin (== or ~= with patches) when developing scripts, minimal (>=) for packages
+    "numpy==2.3.5",
+]
+
+[build-system]
+# Require hatch-vcs alongside hatchling to enable Git tag versioning
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
