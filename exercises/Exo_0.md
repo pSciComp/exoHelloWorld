@@ -1,6 +1,6 @@
 # Exo 0: Introduction
 
-- Create your own repository by "Use this template"
+- Create your own repository by ["Use this template"](https://github.com/new?template_name=hpcHelloWorld&template_owner=t4d-gmbh).
 - If you want to have exemplary solutions for the exercises included, be sure to select "Include all branches" when creating a new repository based on this template.
 - Once you've created your own copy of the repository, you're ready to go.
 - Head over to [Exercise 1](./Exo_1.md) to get started.
