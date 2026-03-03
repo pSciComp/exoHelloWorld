@@ -19,9 +19,13 @@ dependencies = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/mypkgs"]
+packages = ["src/hpchw"]
 
 [build-system]
 # Require hatch-vcs alongside hatchling to enable Git tag versioning
 requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+# Use the git version to set the version of the package
+[tool.hatch.version]
+source = "vcs"

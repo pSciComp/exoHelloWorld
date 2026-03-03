@@ -9,11 +9,11 @@ import os
 import argparse
 from pathlib import Path
 
-from mypkgs.utils import (
+from hpchw.utils import (
     load_json_config,
     prepare_output_dir
 )
-from mypkgs.hello import write_hello
+from hpchw.hello import write_hello
 
 
 def main() -> None:
