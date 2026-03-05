@@ -12,22 +12,21 @@ However, this scripts has some issues we want to address here.
     - Which ones of the 4 pillars (Environment, Configuration, Code, Data) are 
       concerned in this statement.
 - Separate data (SoC Pillar 4):
-  Move all that is input data into an appropriate location inside the project.
-
-  > [!NOTE]
-  > For "tiny" input data, like in this case, we can simply commit it directly into the repository.
-
+  Move all that is input data into an appropriate location inside the project.  
+  _Note:_ "Tiny" input data, like in this case, we can simply commit it directly into the repository.  
   **Bonus**: Track the input data with `git lfs`.
 - Separate configuration (Soc Pillar 2):
   ...
-- Separate environmental variables (SoC Pillar 1):
+  
+- Separate environment variables (SoC Pillar 1):
   ...
-  > [!NOTE]
-  > Since we might track the input data directly in the project and, also,
-  > expect "tiny" output data files, we could get away with considering the input
-  > and output data paths as "internal" to the project and thus that they do > [!NOTE]
-  > concern the environment in which the project runs.  
-  > However, this case is particular and in general we should always expect data
-  > to reside outside, or be exported from, the project context.
-  > So **data location definitions should always concern the environmental pillar!**.
+  
+> [!NOTE]
+> Since we might track the input data directly in the project and, also,
+  expect "tiny" output data files, we could get away with considering the input
+  and output data paths as "internal" to the project and thus that they do not
+  concern the environment in which the project runs.  
+  However, this case is particular and in general we should always expect data
+  to reside outside, or be exported from, the project context.
+  So **data location definitions should always concern the Environment pillar!**
   
