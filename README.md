@@ -27,7 +27,8 @@ with open('data/final/greeting.txt', 'w') as f:
 
 It might not be a surprise to you that such a script, while it works, is far from following any coding practices or adhering to some organisational patterns that would classify it as "documented", "reusable" or ...
 
-Implementing principles like the [Separation of Concerns (SoC)](#TODO) for such a minimal task introduce overhead that is more substantial than the actual codebase itself, however, this overhead is largely static, i.e. it won't scale with the codebase of a project.
+Implementing principles like the [Separation of Concerns (SoC)](#TODO) for such a minimal task introduce overhead that is more substantial than the actual codebase itsel.
+However, this overhead is largely static, i.e. it won't scale with the codebase of a project.
 Implementing a rigorous SoC in a toy project like this one allows to easily identify how a strict separation between environment, configuration, code and data looks like.
 
 ## Usage
