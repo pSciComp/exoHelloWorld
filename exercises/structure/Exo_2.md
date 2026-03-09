@@ -29,7 +29,7 @@ To get started with declaring apptainer containers we recommend you have a look 
 
 ## Your Tasks
 
-1. Create the `containers/` folder and start with an new `.def` file in it: `containers/say_hello.def`.
+1. Create the `containers/` folder and start with an new `.def` file in it: `containers/env.def`.
 2. Start with the container specification:
    * The container definition must specify a base image (e.g., `python:3.13-slim`).
    * The `%files` section is utilized to copy `pyproject.toml` and other required project files into the container.  
@@ -47,7 +47,7 @@ To get started with declaring apptainer containers we recommend you have a look 
    * The `%environment` section allows to export environment variables on runtime of the container.
      It should be used to set the path to where you've installed the virtual environment in the `%post` section, for example (e.g., `export PATH="/opt/venv/bin:$PATH"`).
 3. Build and run your container locally:  
-   * You can build locally using the Apptainer CLI: `apptainer build say_hello.sif containers/say_hello.def`.
+   * You can build locally using the Apptainer CLI: `apptainer build env.sif containers/env.def`.
      
      _NOTE:_ The `.sif` binary should be excluded from version control via `.gitignore`. It is a result from your `.def` container declaration and tracking the `.def` file inside your git repository is all that is needed.
      However, being able to easily obtain a built container (i.e. the `.sif` file) can make your life much easier - an issue we will tackle in the next exercise.

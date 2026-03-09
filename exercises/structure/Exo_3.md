@@ -19,7 +19,7 @@ Continuous Integration/Continuous Deployment (CI/CD) pipelines can help us drast
      You can utilize existing open-source actions to handle this setup for you.
 
 3. Build and authenticate:
-   * Define a pipeline step to execute the `apptainer build` command, targeting your `containers/say_hello.def` file.
+   * Define a pipeline step to execute the `apptainer build` command, targeting your `containers/env.def` file.
 
    _NOTE_: Since we use version control authoritatively, i.e. we use the git version as package version for our `exohw` package, we can (and should!) also use the git version to create an unambiguous tag for the container we build. In doing so, we will always know exactly what version of our project we are using.
    Extracting the git tag and converting it into a form useable for Apptainer or Docker tags requires a few extra steps that are not really of importance for us.
