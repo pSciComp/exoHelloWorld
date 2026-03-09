@@ -25,9 +25,9 @@ with open('data/final/greeting.txt', 'w') as f:
     f.writelines(greetings)
 ```
 
-It might not be a surprise to you that such a script, while it works, is far from following any coding practices or adhering to some organisational patterns that would classify it as "documented", "reusable" or ...
+It might not be a surprise to you that such a script, while it works, is far from following any coding practices or adhering to some organisational patterns that would classify it as "documented", "reusable" or "well structured".
 
-Implementing principles like the [Separation of Concerns (SoC)](#TODO) for such a minimal task introduce overhead that is more substantial than the actual codebase itsel.
+Implementing principles like the [Separation of Concerns (SoC)](https://pscicomp.courses.t4d.ch/content/researchSoftwareEngineering/source/content/computationalProject/index.html#separation-of-concerns-soc) for such a minimal task introduce overhead that is more substantial than the actual codebase itself.
 However, this overhead is largely static, i.e. it won't scale with the codebase of a project.
 Implementing a rigorous SoC in a toy project like this one allows to easily identify how a strict separation between environment, configuration, code and data looks like.
 
@@ -47,9 +47,11 @@ Exercises that focus on the usage of a HPC cluster (e.g. Slurm).
 ## Exercises
 
 ### Structure
-- [**Exercise 1**](./exercises/structure/Exo_1.md): Rubber ducking.
+- [**Exercise 1**](./exercises/structure/Exo_1.md): Separate concerns.
+- [**Exercise 2**](./exercises/structure/Exo_2.md): Build a container.
+- [**Exercise 3**](./exercises/structure/Exo_2.md): CI/CD Build
 
 ### HPC
-- [**Exercise 1**](./exercises/hpc/Exo_1.md): Build a runtime environment with apptainer.
-- [**Exercise 2**](./exercises/hpc/Exo_2.md): 
+- [**Exercise 1**](./exercises/hpc/Exo_1.md): Container deployment
+- [**Exercise 2**](./exercises/hpc/Exo_2.md): Cluster container says hello
 
