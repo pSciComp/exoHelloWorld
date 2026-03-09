@@ -18,6 +18,9 @@ Continuous Integration/Continuous Deployment (CI/CD) pipelines can help us drast
    * **Environment Setup:** You also need to install and configure the Apptainer binary on the runner system.
      You can utilize existing open-source actions to handle this setup for you.
 
+3. Adapt your container build declaration (`containers/env.def`) to accept a `VERSION` variable that we can use the explicitly set the version of our `exohw` package.
+   Recall that we are using the git version as SSOT for versioning and we fetch it during the installation (e.g. with `uv`) form the repository (i.e. the `.git` folder in the project).
+
 3. Build and authenticate:
    * Define a pipeline step to execute the `apptainer build` command, targeting your `containers/env.def` file.
 
@@ -25,11 +28,12 @@ Continuous Integration/Continuous Deployment (CI/CD) pipelines can help us drast
    Extracting the git tag and converting it into a form useable for Apptainer or Docker tags requires a few extra steps that are not really of importance for us.
    You can have a look at an exemplary implementation of this at the [pythonProject Template](https://github.com/j-i-l/pythonProject/blob/724c5b3078d60f0bf753ea8a620c691ba3cb2656/.github/workflows/buildApptainerContainer.yml#L25-L47)
 
+4. Push to the registry:
+   * Add a step to push the built `.sif` image to `ghcr.io/<repository-owner>/<repository-name>:<tag>`.
+
    * To push the container, you will need to authenticate with the GitHub Container Registry (GHCR).
      This can usually be established using the standard `GITHUB_TOKEN` provided by the runner context.
 
-4. Push to the registry:
-   * Add a step to push the built `.sif` image to `ghcr.io/<repository-owner>/<repository-name>:<tag>`.
    * Once you commit and push your workflow file, you can verify its successful execution via your repository's Actions tab.
      You should then see the resulting package in your repository's registry.
 
