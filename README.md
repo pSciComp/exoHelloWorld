@@ -49,7 +49,7 @@ Exercises that focus on the usage of a HPC cluster (e.g. Slurm).
 ### Structure
 - [**Exercise 1**](./exercises/structure/Exo_1.md): Separate concerns.
 - [**Exercise 2**](./exercises/structure/Exo_2.md): Build a container.
-- [**Exercise 3**](./exercises/structure/Exo_2.md): CI/CD Build
+- [**Exercise 3**](./exercises/structure/Exo_3.md): CI/CD Build
 
 ### HPC
 - [**Exercise 1**](./exercises/hpc/Exo_1.md): Container deployment

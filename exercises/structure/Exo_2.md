@@ -5,10 +5,10 @@ Now that we have a well structured mini project it is time to create an appropri
 > [!NOTE]
 > In case you want to make sure to start this exercise with a good state of the project you can checkout the `stuct_exo_1` branch and start from there.
 
-Container are a form of isolated environment we can design and use to run a codebase.
+Container are a form of an isolated environment we can design and use to run a codebase.
 Their definition can - and in many cases should - be part of the project itself.
 
-In therm of Separation of Concerns (SoC), a container definition is the definition of an environment and thus should neither reside in `scripts/`, nor in `src/` or `config/`.
+In terms of Separation of Concerns (SoC), a container definition is the definition of an environment and thus should neither reside in `scripts/`, nor in `src/` or `config/`.
 
 _Ask yourself why not in `config/`?_
 
