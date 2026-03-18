@@ -39,17 +39,13 @@ _⏳ This exercise will be ready by March 20, 2026 ⏳_
    #SBATCH --time=00:10:00
    #SBATCH --output=logs/%A_%a.out
 
-   COURSES=("pSciComp" "math1" "linalg3")
-   export COURSE_NAME=${COURSES[$SLURM_ARRAY_TASK_ID]}
-
    module load apptainer
 
-   apptainer exec \
-     --env COURSE_NAME=$COURSE_NAME \
-     --env-file .env \
-     --bind /scratch/$USER/exoHelloWorld/data/raw:data/raw \
-     --bind /scratch/$USER/exoHelloWorld/data/final:data/final \
-     env-sif_latest.sif \
+   apptainer run \
+     --env COURSE_ID=$SLURM_ARRAY_TASK_ID \
+     --bind ./data/raw:/app/data/raw \
+     --bind ./data/final:/app/data/final \
+     exohw-env_1.1.0.sif \
      python scripts/say_hello.py
    ```
 

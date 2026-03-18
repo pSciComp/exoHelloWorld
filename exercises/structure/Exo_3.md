@@ -44,14 +44,14 @@ Continuous Integration/Continuous Deployment (CI/CD) pipelines can help us drast
    For this to work you must either authenticate to GitHub, or you can set the "package" holding the container to be publicly reachable.
    For this example repository, the settings can be found under:
 
-   <https://github.com/orgs/pSciComp/packages/container/env-sif/settings>
+   <https://github.com/orgs/pSciComp/packages/container/exohw-env/settings>
 
-   Where `env-sif` is the name of the container.
+   Where `exohw-env` is the name of the container.
 
    Alternatively you can export the authentication credentials required to pull the image (`export APPTAINER_DOCKER_USERNAME=<github username>` and `export=APPTAINER_DOCKER_PASSWORD=<Personal access token (PAT)>`.
 
    Using the remote container is then as simple as:
 
    ```bash
-   apptainer run oras://ghcr.io/pscicomp/env-sif:latest
+   apptainer run oras://ghcr.io/pscicomp/exohw-env:1.0.0
    ```
