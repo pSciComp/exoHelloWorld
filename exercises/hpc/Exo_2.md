@@ -47,14 +47,13 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
      env-sif_latest.sif \
      ___ scripts/say_hello.py
 
-   
    ```
 
    **What can and what should be improved in this script?**
 
    **Where would you store this script?**
 
-   _For both questions you can open an issue in your `exoHelloWorld` repository and ping either @j-i-l or @matteodelucchi.
+   _For both questions you can open an issue in your `exoHelloWorld` repository and ping either @j-i-l or @matteodelucchi._
 
 
 
