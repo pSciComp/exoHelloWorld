@@ -1,4 +1,4 @@
-# HPC Exo 3: Minimal HPC Workflow
+# HPC Exo 3: Embarrassingly Parallel
 
 1. **Create 3 greeting files for 3 different courses**  
    We want to run the HelloWorld pipeline once for each of three courses (e.g. `pSciComp`, `math99`, `linalg3`), producing a separate greeting file per course.
