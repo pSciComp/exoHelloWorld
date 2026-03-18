@@ -32,6 +32,7 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 
    ```bash
    #!/bin/bash
+   #SBATCH --account=___
    #SBATCH --job-name=helloworld
    #SBATCH --cpus-per-task=___
    #SBATCH --mem=___
@@ -40,20 +41,19 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 
    module load apptainer
 
-   apptainer exec \
-     --env-file .env \
-     --bind ___:data/raw \
-     --bind ___:data/final \
+   apptainer ___ \
+     --bind ./data/raw:___/raw \
+     --bind ./data/final:___/final \
      env-sif_latest.sif \
      ___ scripts/say_hello.py
+
    ```
 
-   
    **What can and what should be improved in this script?**
 
    **Where would you store this script?**
 
-   _For both questions you can open an issue in your `exoHelloWorld` repository and ping either @j-i-l or @matteodelucchi.
+   _For both questions you can open an issue in your `exoHelloWorld` repository and ping either @j-i-l or @matteodelucchi._
 
 
 
@@ -64,3 +64,13 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
    ./s3cmdc put ... s3://...
    # Or using curl
    ```
+
+> [!NOTE]
+> Unfortunately, pushing data to the Object Storage is currently only supported from the Science Cluster login nodes.
+> The network routing rules prevent the backwards traffic from reaching the compute nodes (i.e. you can push to the Object Storage but you never get a confirmation back, leading the `s3cmdc` command to hang).
+> 
+> This means that you will need to perform the following operations on the login nodes:
+> - Fetch data from the Object Storage and store it on the clusters shared filesystem prior to using it.
+> - Store result data to the shared filesystem on the cluster prior to storing in in Object Storage.
+> 
+> This also disables cloud native approaches in which you would fetch data directly inside your application, e.g. using [pandas `read_parquet`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_parquet.html) method.
