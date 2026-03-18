@@ -60,6 +60,13 @@ def main() -> None:
         help='Path to output directory.'
              'Default: OUTPUT_DIR environment variable.'
     )
+    parser.add_argument(
+        '--course-id',
+        type=int,
+        default=os.environ.get("COURSE_ID", None),
+        help='The index of the course to process.'
+             'Default: All courses are processed'
+    )
     args = parser.parse_args()
 
     # 2. Execute core logic using the utilities
@@ -70,9 +77,17 @@ def main() -> None:
     people = load_json_file(Path(args.input_json))
     #    - ready output location
     out_dir = prepare_output_dir(args.output_dir)
-    final_path = write_hello(people=people,
-                             output_dir=out_dir,
-                             cfg=cfg)
+    # Determine what courses to process
+    if args.course_id is None:
+        courses = cfg.all_courses
+    else:
+        courses = [cfg.all_courses[args.course_id]]
+    # Create the greeting
+    for course in courses:
+        final_path = write_hello(people=people,
+                                 course=course,
+                                 output_dir=out_dir,
+                                 cfg=cfg)
 
     print(f"Job completed. Results safely written to {final_path}")
 
