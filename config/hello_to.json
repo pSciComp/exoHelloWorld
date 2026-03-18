@@ -1,5 +1,5 @@
 {
-    "course": "pSciComp",
+    "all_courses": [ "pSciComp", "math99", "linalg3" ],
     "name": "name",
     "courses": "courses"
 }

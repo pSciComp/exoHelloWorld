@@ -11,6 +11,7 @@ from types import SimpleNamespace
 
 
 def write_hello(people: Collection[dict[str, str]],
+                course: str,
                 output_dir: str,
                 cfg: SimpleNamespace) -> str:
     """
@@ -20,9 +21,12 @@ def write_hello(people: Collection[dict[str, str]],
     ----------
     people : Colleciton[dict[str, str]]
         A collection of person specific information.
+    course : str
+        The course for which a greeting should be created.
     output_dir : str
         The directory where the output file 'output_hello.txt' will be saved.
     cfg : SimpleNamespace
+        Holding the configuration parameters.
 
     Returns
     -------
@@ -32,11 +36,11 @@ def write_hello(people: Collection[dict[str, str]],
     greetings = []
     # create a list of lines for the file
     for person in people:
-        if cfg.course in person[cfg.courses]:
+        if course in person[cfg.courses]:
             # '\n' is the newline character
             greetings.append(f"Hello {person[cfg.name]}\n")
 
-    output_file = os.path.join(output_dir, "output_hello.txt")
+    output_file = os.path.join(output_dir, f"hello_for_{course}.txt")
 
     with open(output_file, 'w') as f:
         f.writelines(greetings)
