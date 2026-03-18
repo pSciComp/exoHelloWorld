@@ -32,6 +32,7 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 
    ```bash
    #!/bin/bash
+   #SBATCH --account=___
    #SBATCH --job-name=helloworld
    #SBATCH --cpus-per-task=___
    #SBATCH --mem=___
@@ -40,15 +41,15 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 
    module load apptainer
 
-   apptainer exec \
-     --env-file .env \
-     --bind ___:data/raw \
-     --bind ___:data/final \
+   apptainer ___ \
+     --bind ./data/raw:___/raw \
+     --bind ./data/final:___/final \
      env-sif_latest.sif \
      ___ scripts/say_hello.py
-   ```
 
    
+   ```
+
    **What can and what should be improved in this script?**
 
    **Where would you store this script?**
