@@ -141,6 +141,5 @@ apptainer shell env.sif
 
 ```
 
-
 Verify the path of the Python executable and the presence of required dependencies.
 *Analytical Exercise: Determine the methodology required to confirm that the specific dependency versions defined in `pyproject.toml` match the binaries installed within the immutable container image.*
