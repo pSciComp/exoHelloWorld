@@ -54,4 +54,4 @@ Exercises that focus on the usage of a HPC cluster (e.g. Slurm).
 ### HPC
 - [**Exercise 1**](./exercises/hpc/Exo_1.md): Container deployment
 - [**Exercise 2**](./exercises/hpc/Exo_2.md): Cluster container says hello
-
+- [**Exercise 3**](./exercises/hpc/Exo_3.md): Embarrassingly Parallel
