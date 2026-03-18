@@ -7,7 +7,7 @@ on:
 env:
   REGISTRY: ghcr.io
   # Hardcoded container name here
-  IMAGE_NAME: ${{ github.repository_owner }}/env-sif
+  IMAGE_NAME: ${{ github.repository_owner }}/exohw-env
 
 jobs:
   build-apptainer:
