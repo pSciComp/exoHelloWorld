@@ -15,5 +15,5 @@ apptainer run \
   --env COURSE_ID=$SLURM_ARRAY_TASK_ID \
   --bind ./data/raw:/app/data/raw \
   --bind ./data/final:/app/data/final \
-  exohw-env_1.1.0.sif \
+  exohw-env_2.0.0.sif \
   python scripts/say_hello.py

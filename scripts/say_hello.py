@@ -62,7 +62,7 @@ def main() -> None:
     )
     parser.add_argument(
         '--course-id',
-        type=str,
+        type=int,
         default=os.environ.get("COURSE_ID", None),
         help='The index of the course to process.'
              'Default: All courses are processed'
@@ -81,7 +81,7 @@ def main() -> None:
     if args.course_id is None:
         courses = cfg.all_courses
     else:
-        courses = [args.course_id]
+        courses = [cfg.all_courses[args.course_id]]
     # Create the greeting
     for course in courses:
         final_path = write_hello(people=people,
