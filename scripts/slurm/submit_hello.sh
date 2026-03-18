@@ -13,5 +13,5 @@ module load apptainer
 apptainer run \
   --bind ./data/raw:/app/data/raw \
   --bind ./data/final:/app/data/final \
-  env-sif_latest.sif \
+  exohw-env_1.0.0.sif \
   python scripts/say_hello.py
