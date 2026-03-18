@@ -45,7 +45,7 @@ _⏳ This exercise will be ready by March 20, 2026 ⏳_
      --env COURSE_ID=$SLURM_ARRAY_TASK_ID \
      --bind ./data/raw:/app/data/raw \
      --bind ./data/final:/app/data/final \
-     env-sif_latest.sif \
+     exohw-env_1.1.0.sif \
      python scripts/say_hello.py
    ```
 

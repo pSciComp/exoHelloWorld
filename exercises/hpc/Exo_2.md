@@ -23,7 +23,7 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 2. **Update your container and redeploy it.**
    Either pull the pre-built container from the GitHub Container Registry:
    ```bash
-   apptainer pull oras://ghcr.io/pscicomp/env-sif:latest
+   apptainer pull oras://ghcr.io/pscicomp/exohw-env:1.0.0
    ```
    Fetch it over the Swift object storage (if configured) or build it directly in the production environment.
 
@@ -44,7 +44,7 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
    apptainer ___ \
      --bind ./data/raw:___/raw \
      --bind ./data/final:___/final \
-     env-sif_latest.sif \
+     exohw_env_1.0.0.sif \
      ___ scripts/say_hello.py
 
    ```
