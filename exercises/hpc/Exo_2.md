@@ -73,4 +73,5 @@ It is designed to read these from the environment variables `CONFIG_PATH` and `O
 > This means that you will need to perform the following operations on the login nodes:
 > - Fetch data from the Object Storage and store it on the clusters shared filesystem prior to using it.
 > - Store result data to the shared filesystem on the cluster prior to storing in in Object Storage.
+> 
 > This also disables cloud native approaches in which you would fetch data directly inside your application, e.g. using [pandas read_parquet](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_parquet.html) method.
