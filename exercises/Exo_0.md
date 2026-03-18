@@ -12,3 +12,5 @@
 - Head over to [Structure Exercise 1](./structure/Exo_1.md) to get started.
 - If you have questions you might check the exemplary solutions available under the corresponding branches, i.e. solutions to _Strucuter Exercise 1_ can be found in branch _struct_exo_1_.
   Alternatively, you can also [open an issue](https://github.com/pSciComp/exoHelloWorld/issues/new) on the template repository or checkout the [discussions](https://github.com/pSciComp/exoHelloWorld/discussions).
+- **Invite us to your repository:**
+  Add [@matteodelucchi](https://github.com/matteodelucchi) and [@j-i-l](https://github.com/j-i-l) as collaborators, open an issue (does not really matter how it is called) and tag us in a comment.
